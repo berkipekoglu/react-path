@@ -1,3 +1,6 @@
+### Demo
+![](demo.png)
+
 ## Components Props olayları
 Oluşturduğumuz componentlere eğer bir veri ya da html elementleri göndermek istersek props özelliğini kullanabiliyoruz.
 
