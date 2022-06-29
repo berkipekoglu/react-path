@@ -1,6 +1,65 @@
 ## Components Props olayları
+Oluşturduğumuz componentlere eğer bir veri ya da html elementleri göndermek istersek props özelliğini kullanabiliyoruz.
 
+### Props nasıl tanımlıyoruz?
+Oluşturduğumuz fonksiyon componentine "props" ekliyoruz.
+`const SelamComp = (props) => {
+    // codes
+}`
 
+`burada araya ufak bir bilgi girişi yapmak istiyorum.
+(props) => {} şeklinde yaptığımız tanımı ({name, title, age}) => {} şeklinde yaparsak arada ki props objesini kaldırmış oluruz ve direk tanımlanmış değişkenler üzerinden ulaşırız.  {name} , {title}, {age}
+`
+
+Props içerisinden ulaşacağımız verilere gönderirken belirttiğimiz isimlerden ulaşıyoruz.
+
+`<button>{props.title}</button>`
+
+Componenti çağırdığımız sayfada ise propsumuza aşağıda ki gibi veri tanım yapıyoruz.
+
+`<SelamComp title="Click me!" />`
+
+*burada tanımladığım propsumu yakalacağım değişken başlığını yukarıda gösterdiğim şekilde yakalıyoruz ve kullanıyoruz.* `{props.title}`
+ 
+## Props Children
+Props childrenlar bizim oluşturduğumuz componente html elementleri göndermek istediğimizde kullandığımız özelliktir. 
+
+Örnek:
+
+`<SelamComp>
+    <span>Arttır</span>
+    <button>Increase!</button>
+</SelamComp>`
+
+Burada ki props childrenları yakalamak için `children` özelliğini kullanıyoruz.
+
+`{props.children}`
+
+# Prop Types
+Tanımdladığımız propslara tip belirteçleri ekleyebiliriz. Bu şekilde propslar üzerinde veri kontrolü sağlarız.
+
+İlk olarak aşağıda ki *prop-types* kütüphanesini import etmemiz gerekiyor.
+
+`import PropTypes from 'prop-types';`
+
+`
+SelamComp.propTypes = {
+    name: PropTypes.string,
+    age: PropTypes.number,
+    children: PropTypes.node
+}
+
+şeklinde tip tanımı yaparız.
+`
+
+_Aynı şekilde propslara default tanımlar yapabiliriz._
+
+`
+SelamComp.defaultProps = {
+    name: "Berk"
+    age: 24
+}
+`
 
 # Getting Started with Create React App
 
