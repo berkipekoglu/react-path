@@ -45,24 +45,18 @@ Tanımdladığımız propslara tip belirteçleri ekleyebiliriz. Bu şekilde prop
 
 `import PropTypes from 'prop-types';`
 
-`
-SelamComp.propTypes = {
+`SelamComp.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number,
     children: PropTypes.node
-}
-
-şeklinde tip tanımı yaparız.
-`
+}` şeklinde tip tanımı yaparız.
 
 _Aynı şekilde propslara default tanımlar yapabiliriz._
 
-`
-SelamComp.defaultProps = {
+`SelamComp.defaultProps = {
     name: "Berk"
     age: 24
-}
-`
+}`
 
 # Getting Started with Create React App
 
